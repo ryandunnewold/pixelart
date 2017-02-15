@@ -1,0 +1,12 @@
+<div id="pixel-wrapper">
+  <%= simple_form_for @art do |f| %>
+    <% 8.times.each do |i| %>
+      <% 8.times.each do |ii| %>
+        <div class="pixel">
+          <input name="colors[<%= i %>][<%= ii %>]">
+        </div>
+      <% end %>
+    <% end %>
+    <%= f.submit 'Save' %>
+  <% end %>
+</div>
