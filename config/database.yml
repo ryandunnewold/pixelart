@@ -27,7 +27,7 @@ production:
   encoding: utf8
   database: d16qkmb38t0l8l
   pool: 5
-  username: eenjtsnpfcjayv
+  username: uotppufscmhvmd
   password: 60c10f980d726ef65a8d7684d7edcdc5c4ef7ceae38b0ac1a57c7e5b985f4eb1
   host: ec2-54-83-49-44.compute-1.amazonaws.com
   port: 5432
