@@ -29,5 +29,5 @@ production:
   pool: 5
   username: eenjtsnpfcjayv
   password: 60c10f980d726ef65a8d7684d7edcdc5c4ef7ceae38b0ac1a57c7e5b985f4eb1
-  host: ec2-23-21-215-184.compute-1.amazonaws.com
+  host: ec2-54-83-49-44.compute-1.amazonaws.com
   port: 5432
