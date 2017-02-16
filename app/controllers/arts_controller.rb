@@ -1,5 +1,6 @@
 class ArtsController < ApplicationController
   def index
+    @arts = Art.all
   end
 
   def show
@@ -15,7 +16,12 @@ class ArtsController < ApplicationController
     params[:colors].values.each do |row|
       colors << row.values
     end
-    @art = Art.create(colors: colors)
+    @art = Art.new(colors: colors)
+    if @art.save
+      redirect_to art_path(@art)
+    else
+      redirect_to new_art_path(@art)
+    end
   end
 
   def edit

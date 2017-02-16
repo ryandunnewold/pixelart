@@ -1,10 +1,3 @@
 <div class="art">
-  <% @art.colors.each do |row| %>
-    <div class="art__row">
-      <% row.each do |pixel| %>
-        <div class="art__pixel" style="background:<%= pixel %>">
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+  <%= render @art %>
 </div>

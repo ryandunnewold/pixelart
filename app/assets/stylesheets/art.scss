@@ -5,11 +5,25 @@
 .art {
   height: 512px;
   width: 512px;
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
   .art__row {
+    flex: 1;
     display: flex;
+    flex-direction: row;
   }
   .art__pixel {
-    height: 64px;
-    width: 64px;
+    flex: 1;
+    background: #f8f8f8;
+  }
+}
+
+.art-list {
+  display: flex;
+  flex-flow: row wrap;
+  .art {
+    width: 256px;
+    height: 256px;
   }
 }
