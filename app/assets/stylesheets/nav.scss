@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  .nav__link {
+    font-size: 14px;
+    font-family: "Courier New";
+    align-items: center;
+    color: #222;
+    &:hover, &:focus {
+      color: #222;
+      text-decoration: underline;
+    }
+  }
+}
