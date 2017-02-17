@@ -1,12 +1,14 @@
-<div id="pixel-wrapper">
-  <%= simple_form_for @art, html: {class: "art-form"} do |f| %>
+<%= simple_form_for @art, html: {class: "art-form"} do |f| %>
+  <div class="art-form__top">
     <% 8.times.each do |i| %>
-      <div class="art-form__row">
-        <% 8.times.each do |ii| %>
-          <input class="art-form__input" name="colors[<%= i %>][<%= ii %>]">
-        <% end %>
-      </div>
+    <div class="art-form__row">
+      <% 8.times.each do |ii| %>
+      <input class="art-form__input" maxlength="7" name="colors[<%= i %>][<%= ii %>]">
+      <% end %>
+    </div>
     <% end %>
-    <%= f.submit 'Save' %>
-  <% end %>
-</div>
+  </div>
+  <div class="art-form__bottom">
+    <%= f.submit 'Save', class: "button button--primary" %>
+  </div>
+<% end %>

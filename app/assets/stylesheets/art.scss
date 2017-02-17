@@ -20,11 +20,13 @@
 }
 
 .art-form {
-  height: 512px;
-  width: 512px;
-  display: flex;
-  flex-direction: column;
   margin: 16px;
+  .art-form__top {
+    display: flex;
+    flex-direction: column;
+    height: 512px;
+    width: 512px;
+  }
   .art-form__row {
     flex: 1;
     display: flex;
@@ -50,6 +52,7 @@
     height: 64px;
     border: none;
     outline: none;
+    text-align: center;
   }
 }
 
@@ -61,6 +64,7 @@
 
 .art-list {
   display: flex;
+  justify-content: flex-start;
   flex-flow: row wrap;
   .art {
     width: 256px;
