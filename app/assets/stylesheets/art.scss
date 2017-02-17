@@ -19,6 +19,32 @@
   }
 }
 
+.art-form {
+  height: 512px;
+  width: 512px;
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  .art-form__row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+  }
+  .art-form__input {
+    background: #f8f8f8;
+    width: 64px;
+    height: 64px;
+    border: none;
+    outline: none;
+  }
+}
+
+.pixel {
+  .pixel__input {
+
+  }
+}
+
 .art-list {
   display: flex;
   flex-flow: row wrap;
