@@ -1,2 +1,16 @@
-<h1>Art#edit</h1>
-<p>Find me in app/views/art/edit.html.erb</p>
+<% content_for :wrapper_class, 'wrapper__centered' %>
+
+<%= simple_form_for @art, html: {class: "art-form"} do |f| %>
+  <div class="art-form__top">
+    <% 8.times.each do |i| %>
+    <div class="art-form__row">
+      <% 8.times.each do |ii| %>
+      <input class="art-form__input" maxlength="7" name="colors[<%= i %>][<%= ii %>]">
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+  <div class="art-form__bottom">
+    <%= f.submit 'Save', class: "button button--primary" %>
+  </div>
+<% end %>

@@ -1,4 +1,6 @@
 class ArtsController < ApplicationController
+  before_action :set_art, only: [:show, :edit, :update, :destroy]
+  
   def index
     @arts = Art.all
   end
@@ -32,4 +34,11 @@ class ArtsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+    def set_art
+      @art = Art.find(params[:id])
+    end
+
 end
