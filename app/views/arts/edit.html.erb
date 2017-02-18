@@ -5,7 +5,7 @@
     <% 8.times.each do |i| %>
     <div class="art-form__row">
       <% 8.times.each do |ii| %>
-      <input class="art-form__input" maxlength="7" name="colors[<%= i %>][<%= ii %>]">
+      <input class="art-form__input" maxlength="7" placeholder="#ffffff" value="<%= @art.colors[i][ii] unless @art.colors[i].blank? %>" name="colors[<%= i %>][<%= ii %>]">
       <% end %>
     </div>
     <% end %>

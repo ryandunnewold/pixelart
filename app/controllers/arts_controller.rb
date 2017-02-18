@@ -1,6 +1,6 @@
 class ArtsController < ApplicationController
   before_action :set_art, only: [:show, :edit, :update, :destroy]
-  
+
   def index
     @arts = Art.all
   end
@@ -30,6 +30,16 @@ class ArtsController < ApplicationController
   end
 
   def update
+    colors = []
+    params[:colors].values.each do |row|
+      colors << row.values
+    end
+    if @art.update(colors: colors)
+      redirect_to art_path(@art)
+    else
+      redirect_to edit_art_path(@art)
+    end
+
   end
 
   def destroy
