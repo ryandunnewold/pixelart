@@ -2,7 +2,7 @@ class ArtsController < ApplicationController
   before_action :set_art, only: [:show, :edit, :update, :destroy]
 
   def index
-    @arts = Art.all
+    @arts = Art.all.order(created_at: :desc)
   end
 
   def show
